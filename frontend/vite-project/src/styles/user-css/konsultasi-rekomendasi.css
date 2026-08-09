@@ -1,0 +1,433 @@
+/* ==================== KONSULTASI REKOMENDASI USER STYLES ==================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.konsultasi-wrapper {
+  display: flex;
+  height: 100vh;
+  background-color: #f8fafc;
+}
+
+.konsultasi-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  overflow: hidden;
+}
+
+.konsultasi-main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow-y: auto;
+  background-color: #f8fafc;
+}
+
+/* ==================== TOPBAR ==================== */
+
+.konsultasi-topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  background: white;
+  border-bottom: 1px solid #e2e8f0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.konsultasi-topbar-left {
+  flex: 1;
+}
+
+.konsultasi-topbar-title h1 {
+  font-size: 1.75rem;
+  color: #1a202c;
+  margin-bottom: 0.25rem;
+  font-weight: 700;
+}
+
+.konsultasi-topbar-title p {
+  color: #718096;
+  font-size: 0.875rem;
+}
+
+.konsultasi-topbar-user {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding-left: 2rem;
+}
+
+.konsultasi-user-avatar {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.konsultasi-user-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.konsultasi-user-name {
+  font-weight: 600;
+  color: #1a202c;
+  font-size: 0.95rem;
+}
+
+.konsultasi-user-role {
+  color: #718096;
+  font-size: 0.8rem;
+}
+
+/* ==================== CONTENT AREA ==================== */
+
+.konsultasi-content {
+  flex: 1;
+  padding: 2rem;
+  overflow-y: auto;
+}
+
+/* ==================== FORM SECTION ==================== */
+
+.konsultasi-form-section {
+  background: white;
+  border-radius: 0.75rem;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e2e8f0;
+}
+
+.konsultasi-form-section h2 {
+  font-size: 1.5rem;
+  color: #1a202c;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.konsultasi-form-desc {
+  color: #718096;
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
+}
+
+.konsultasi-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.konsultasi-form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.konsultasi-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.konsultasi-form-group.full-width {
+  grid-column: 1 / -1;
+}
+
+.konsultasi-label {
+  font-weight: 600;
+  color: #2d3748;
+  font-size: 0.95rem;
+}
+
+.konsultasi-label::after {
+  content: " *";
+  color: #e53e3e;
+}
+
+.konsultasi-required {
+  display: inline-block;
+  font-size: 0.8rem;
+  color: #d97706;
+  font-weight: 500;
+  margin-left: 0.5rem;
+  background-color: #fef3c7;
+  padding: 0.125rem 0.5rem;
+  border-radius: 0.25rem;
+}
+
+.konsultasi-input,
+.konsultasi-select,
+.konsultasi-textarea {
+  padding: 0.75rem 1rem;
+  border: 1px solid #cbd5e0;
+  border-radius: 0.5rem;
+  font-size: 0.95rem;
+  font-family: inherit;
+  transition: all 0.3s ease;
+  background-color: white;
+  color: #1a202c;
+}
+
+.konsultasi-input:focus,
+.konsultasi-select:focus,
+.konsultasi-textarea:focus {
+  outline: none;
+  border-color: #10b981;
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1);
+  background-color: #f7fafc;
+}
+
+.konsultasi-input:read-only {
+  background-color: #f7fafc;
+  color: #718096;
+  cursor: not-allowed;
+}
+
+.konsultasi-input::placeholder,
+.konsultasi-textarea::placeholder {
+  color: #a0aec0;
+}
+
+.konsultasi-select {
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  background-size: 1.25rem;
+  padding-right: 2.5rem;
+}
+
+.konsultasi-textarea {
+  resize: vertical;
+  min-height: 100px;
+  font-family: inherit;
+}
+
+.konsultasi-form-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.konsultasi-btn-submit,
+.konsultasi-btn-reset {
+  padding: 0.875rem 2rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: inherit;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.konsultasi-btn-submit {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  color: white;
+  flex: 1;
+  min-width: 200px;
+}
+
+.konsultasi-btn-submit:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(16, 185, 129, 0.3);
+}
+
+.konsultasi-btn-submit:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.konsultasi-btn-reset {
+  background-color: #e2e8f0;
+  color: #2d3748;
+  min-width: 150px;
+}
+
+.konsultasi-btn-reset:hover {
+  background-color: #cbd5e0;
+  transform: translateY(-2px);
+}
+
+/* ==================== ALERT MESSAGES ==================== */
+
+.konsultasi-alert {
+  padding: 1rem 1.5rem;
+  border-radius: 0.5rem;
+  margin-bottom: 1.5rem;
+  border-left: 4px solid #10b981;
+  background-color: #ecfdf5;
+  color: #065f46;
+  display: flex;
+  align-items: flex-start;
+}
+
+.konsultasi-alert.alert-error {
+  border-left-color: #e53e3e;
+  background-color: #fed7d7;
+  color: #742a2a;
+}
+
+.konsultasi-alert.alert-success {
+  border-left-color: #38a169;
+  background-color: #c6f6d5;
+  color: #22543d;
+}
+
+.konsultasi-alert.alert-warning {
+  border-left-color: #d97706;
+  background-color: #fed7aa;
+  color: #78350f;
+}
+
+.alert-content {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.alert-content strong {
+  font-weight: 700;
+}
+
+/* ==================== RESPONSIVE DESIGN ==================== */
+
+@media (max-width: 1024px) {
+  .konsultasi-container {
+    margin-left: 220px;
+  }
+
+  .konsultasi-content {
+    padding: 1.5rem;
+  }
+
+  .konsultasi-form-section {
+    padding: 1.5rem;
+  }
+
+  .konsultasi-form-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .konsultasi-wrapper {
+    flex-direction: column;
+  }
+
+  .konsultasi-container {
+    margin-left: 0;
+    flex-direction: column;
+  }
+
+  .konsultasi-topbar {
+    flex-direction: row;
+    gap: 0.5rem;
+    align-items: flex-start;
+  }
+
+  .konsultasi-topbar-user {
+    width: 35%;
+    padding-left: 1rem;
+    border-left: 1px solid #e2e8f0;
+  }
+
+  .konsultasi-topbar-title h1 {
+    font-size: 1rem;
+  }
+
+  .konsultasi-content {
+    padding: 1rem;
+  }
+
+  .konsultasi-form-section {
+    padding: 1rem;
+  }
+
+  .konsultasi-form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .konsultasi-form-actions {
+    flex-direction: column;
+  }
+
+  .konsultasi-btn-submit,
+  .konsultasi-btn-reset {
+    width: 100%;
+    min-width: unset;
+  }
+}
+
+@media (max-width: 480px) {
+  .konsultasi-topbar-title h1 {
+    font-size: 1.25rem;
+  }
+
+  .konsultasi-topbar-title p {
+    font-size: 0.75rem;
+  }
+
+  .konsultasi-form-section h2 {
+    font-size: 1.25rem;
+  }
+
+  .konsultasi-content {
+    padding: 0.75rem;
+  }
+
+  .konsultasi-form-section {
+    padding: 1rem;
+  }
+
+  .konsultasi-label {
+    font-size: 0.85rem;
+  }
+
+  .konsultasi-input,
+  .konsultasi-select,
+  .konsultasi-textarea {
+    font-size: 0.9rem;
+    padding: 0.5rem 0.75rem;
+  }
+}
+
+/* ==================== ANIMATION ==================== */
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.konsultasi-form-section,
+.konsultasi-alert {
+  animation: slideIn 0.3s ease-out;
+}

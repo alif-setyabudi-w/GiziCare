@@ -1,0 +1,459 @@
+/* ==================== KONSUMSI MAKANAN USER STYLES ==================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.konsumsi-wrapper {
+  display: flex;
+  height: 100vh;
+  background-color: #f8fafc;
+}
+
+.konsumsi-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  overflow: hidden;
+}
+
+.konsumsi-main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow-y: auto;
+  background-color: #f8fafc;
+}
+
+/* ===== TOPBAR ===== */
+.konsumsi-topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem 2rem;
+  background: #fff;
+  border-bottom: 1px solid #e2e8f0;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.konsumsi-topbar-title h1 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #1a202c;
+}
+
+.konsumsi-topbar-title p {
+  font-size: 0.85rem;
+  color: #718096;
+  margin-top: 2px;
+}
+
+.konsumsi-topbar-user {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.konsumsi-user-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #38a169, #276749);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.konsumsi-user-name {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #2d3748;
+}
+
+.konsumsi-user-role {
+  font-size: 0.75rem;
+  color: #a0aec0;
+}
+
+/* ===== CONTENT ===== */
+.konsumsi-content {
+  padding: 1.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* ===== FORM CARD ===== */
+.konsumsi-form-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.07);
+  overflow: hidden;
+}
+
+.konsumsi-form-card-header {
+  background: linear-gradient(135deg, #38a169, #276749);
+  padding: 1.25rem 1.5rem;
+  color: #fff;
+}
+
+.konsumsi-form-card-header h2 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 2px;
+}
+
+.konsumsi-form-card-header p {
+  font-size: 0.82rem;
+  opacity: 0.85;
+}
+
+.konsumsi-form-body {
+  padding: 1.5rem;
+}
+
+.konsumsi-form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.konsumsi-form-row.three-col {
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.konsumsi-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.konsumsi-form-group.full-width {
+  grid-column: 1 / -1;
+}
+
+.konsumsi-label {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #4a5568;
+}
+
+.konsumsi-input,
+.konsumsi-select,
+.konsumsi-textarea {
+  padding: 0.6rem 0.85rem;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  color: #2d3748;
+  background: #f8fafc;
+  transition: border-color 0.2s;
+  outline: none;
+}
+
+.konsumsi-input:focus,
+.konsumsi-select:focus,
+.konsumsi-textarea:focus {
+  border-color: #38a169;
+  background: #fff;
+}
+
+.konsumsi-textarea {
+  resize: vertical;
+  min-height: 70px;
+}
+
+.konsumsi-form-actions {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: flex-end;
+  margin-top: 1rem;
+}
+
+.btn-save {
+  background: linear-gradient(135deg, #38a169, #276749);
+  color: #fff;
+  border: none;
+  padding: 0.65rem 1.5rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.btn-save:hover {
+  opacity: 0.9;
+}
+
+.btn-cancel {
+  background: #edf2f7;
+  color: #4a5568;
+  border: none;
+  padding: 0.65rem 1.2rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn-cancel:hover {
+  background: #e2e8f0;
+}
+
+/* ===== TABLE SECTION ===== */
+.konsumsi-table-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.07);
+  overflow: hidden;
+}
+
+.konsumsi-table-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.1rem 1.5rem;
+  border-bottom: 1px solid #e2e8f0;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.konsumsi-table-header h2 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #1a202c;
+}
+
+.konsumsi-table-filters {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.konsumsi-filter-input,
+.konsumsi-filter-select {
+  padding: 0.5rem 0.85rem;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  color: #2d3748;
+  outline: none;
+  background: #f8fafc;
+}
+
+.konsumsi-filter-input:focus,
+.konsumsi-filter-select:focus {
+  border-color: #38a169;
+}
+
+.btn-add {
+  background: linear-gradient(135deg, #38a169, #276749);
+  color: #fff;
+  border: none;
+  padding: 0.55rem 1.1rem;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s;
+  white-space: nowrap;
+}
+
+.btn-add:hover {
+  opacity: 0.9;
+}
+
+.konsumsi-table-responsive {
+  overflow-x: auto;
+}
+
+.konsumsi-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+}
+
+.konsumsi-table thead th {
+  background: #f7fafc;
+  color: #4a5568;
+  font-weight: 600;
+  padding: 0.75rem 1rem;
+  text-align: left;
+  border-bottom: 2px solid #e2e8f0;
+  white-space: nowrap;
+}
+
+.konsumsi-table tbody tr {
+  border-bottom: 1px solid #f1f5f9;
+  transition: background 0.15s;
+}
+
+.konsumsi-table tbody tr:hover {
+  background: #f8fffb;
+}
+
+.konsumsi-table tbody td {
+  padding: 0.75rem 1rem;
+  color: #2d3748;
+  vertical-align: middle;
+}
+
+.waktu-badge {
+  padding: 0.25rem 0.7rem;
+  border-radius: 20px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  display: inline-block;
+}
+
+.waktu-pagi    { background: #fef3c7; color: #b45309; }
+.waktu-siang   { background: #d1fae5; color: #065f46; }
+.waktu-sore    { background: #fee2e2; color: #b91c1c; }
+.waktu-malam   { background: #ede9fe; color: #6d28d9; }
+.waktu-minuman { background: #dbeafe; color: #1e40af; }
+
+.action-buttons {
+  display: flex;
+  gap: 0.4rem;
+}
+
+.btn-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 7px;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  transition: opacity 0.2s;
+}
+
+.btn-icon:hover { opacity: 0.8; }
+.btn-icon.edit   { background: #ebf8ff; color: #2b6cb0; }
+.btn-icon.delete { background: #fff5f5; color: #c53030; }
+
+.empty-row td {
+  text-align: center;
+  padding: 2.5rem 1rem;
+  color: #a0aec0;
+  font-size: 0.9rem;
+}
+
+/* ===== MODAL ===== */
+.konsumsi-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.konsumsi-modal {
+  background: #fff;
+  border-radius: 14px;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.18);
+  overflow: hidden;
+  animation: modalIn 0.2s ease;
+}
+
+@keyframes modalIn {
+  from { transform: scale(0.95); opacity: 0; }
+  to   { transform: scale(1);    opacity: 1; }
+}
+
+.konsumsi-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.25rem;
+  background: linear-gradient(135deg, #38a169, #276749);
+  color: #fff;
+}
+
+.konsumsi-modal-header h3 {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.btn-modal-close {
+  background: rgba(255,255,255,0.2);
+  border: none;
+  color: #fff;
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.konsumsi-modal-body {
+  padding: 1.25rem;
+}
+
+.konsumsi-modal-body .konsumsi-form-row {
+  grid-template-columns: 1fr;
+}
+
+.konsumsi-modal-footer {
+  padding: 0.9rem 1.25rem;
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.6rem;
+  border-top: 1px solid #e2e8f0;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .konsumsi-content {
+    padding: 1rem;
+  }
+
+  .konsumsi-topbar {
+    padding: 1rem;
+  }
+
+  .konsumsi-form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .konsumsi-pt-filter-input,
+  .konsumsi-pt-filter-select {
+    width: 48%;
+  }
+
+  .konsumsi-table-filters {width: 100%;}
+  .konsumsi-filter-input, .konsumsi-filter-select{
+    width: 48%;
+  }
+
+  .konsumsi-form-row.three-col {
+    grid-template-columns: 1fr;
+  }
+
+  .konsumsi-table-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

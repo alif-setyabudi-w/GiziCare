@@ -1,0 +1,756 @@
+﻿/* Hasil Rekomendasi - User Page Styles */
+
+/* ====================================== */
+/* CONTAINER */
+/* ====================================== */
+.hasil-rekomendasi-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 4px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* ====================================== */
+/* HEADER */
+/* ====================================== */
+.hasil-header {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  border-bottom: 3px solid #667eea;
+}
+
+.hasil-header h1 {
+  font-size: 22px;
+  color: #374151;
+  margin: 0 0 6px 0;
+  font-weight: 700;
+}
+
+.hasil-header .subtitle {
+  color: #6b7280;
+  font-size: 14px;
+  margin: 0;
+}
+
+/* ====================================== */
+/* 3-COLUMN INFO GRID */
+/* ====================================== */
+.reko-detail-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.reko-detail-group {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.reko-detail-group h3 {
+  margin: 0 0 1rem 0;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #667eea;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-bottom: 2px solid #f3f4f6;
+  padding-bottom: 0.75rem;
+}
+
+.reko-detail-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.65rem 0;
+  border-bottom: 1px solid rgba(229, 231, 235, 0.6);
+}
+
+.reko-detail-row:last-child {
+  border-bottom: none;
+}
+
+.reko-detail-row span {
+  color: #6b7280;
+  font-size: 0.875rem;
+}
+
+.reko-detail-row strong {
+  color: #374151;
+  font-weight: 600;
+  font-size: 0.875rem;
+  text-align: right;
+}
+
+/* ====================================== */
+/* TABLE HEADING */
+/* ====================================== */
+.reko-table-heading {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #374151;
+  margin: 0;
+}
+
+/* ====================================== */
+/* FOODS TABLE */
+/* ====================================== */
+.reko-foods-table {
+  overflow-x: auto;
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.reko-foods-table table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+}
+
+.reko-foods-table thead {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.reko-foods-table th {
+  padding: 1rem;
+  text-align: left;
+  font-weight: 600;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+}
+
+.reko-foods-table td {
+  padding: 0.9rem 1rem;
+  border-bottom: 1px solid #e5e7eb;
+  color: #374151;
+  font-size: 0.875rem;
+}
+
+.reko-foods-table tbody tr:hover {
+  background: #f9fafb;
+}
+
+.reko-foods-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* ====================================== */
+/* SIMILARITY BAR */
+/* ====================================== */
+.reko-similarity-bar {
+  display: inline-flex;
+  align-items: center;
+  height: 18px;
+  width: 90px;
+  background: #e5e7eb;
+  border-radius: 4px;
+  overflow: hidden;
+  vertical-align: middle;
+  margin-right: 6px;
+}
+
+.reko-similarity-fill {
+  display: block;
+  height: 100%;
+  background: linear-gradient(90deg, #10b981 0%, #059669 100%);
+  transition: width 0.3s ease;
+}
+
+/* ====================================== */
+/* ACTION BUTTONS */
+/* ====================================== */
+.reko-action-buttons {
+  display: flex;
+  gap: 10px;
+  padding-bottom: 1rem;
+}
+
+.btn-print {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  padding: 10px 22px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-print:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(102, 126, 234, 0.35);
+}
+
+/* ====================================== */
+/* RESPONSIVE */
+/* ====================================== */
+@media (max-width: 768px) {
+  .reko-detail-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .reko-foods-table th,
+  .reko-foods-table td {
+    padding: 0.75rem 0.6rem;
+    font-size: 0.8rem;
+  }
+
+  .reko-similarity-bar {
+    width: 60px;
+  }
+}
+
+
+/* ====================================== */
+/* CATATAN DARI PETUGAS */
+/* ====================================== */
+.reko-catatan-petugas {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  border-left: 4px solid #667eea;
+}
+
+.catatan-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 1.5rem;
+  background: linear-gradient(135deg, #f0f3ff 0%, #e8ecff 100%);
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.catatan-header h3 {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 700;
+  color: #374151;
+}
+
+.catatan-icon {
+  font-size: 1.2rem;
+}
+
+.catatan-body {
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.catatan-body:last-child {
+  border-bottom: none;
+}
+
+.catatan-body.catatan-keterangan {
+  background: #fafafa;
+}
+
+.catatan-label {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #667eea;
+  margin-bottom: 0.4rem;
+}
+
+.catatan-body p {
+  margin: 0;
+  font-size: 14px;
+  color: #374151;
+  line-height: 1.7;
+  white-space: pre-wrap;
+}
+
+@media (max-width: 480px) {
+  .reko-foods-table th {
+    font-size: 0.7rem;
+  }
+}
+
+/* ====================================== */
+/* OVERVIEW CARDS */
+/* ====================================== */
+.hasil-overview-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.hasil-overview-card {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  border-left: 4px solid #667eea;
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.hasil-card-icon {
+  font-size: 2rem;
+  min-width: 50px;
+}
+
+.hasil-card-content h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #6b7280;
+}
+
+.hasil-card-value {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 700;
+  color: #667eea;
+}
+
+/* ====================================== */
+/* TABLE SECTION */
+/* ====================================== */
+.hasil-table-section {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.hasil-table-section h2 {
+  margin: 0 0 1.5rem 0;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #374151;
+}
+
+/* ====================================== */
+/* TABLE RESPONSIVE */
+/* ====================================== */
+.hasil-table-responsive {
+  overflow-x: auto;
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;
+}
+
+.hasil-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+}
+
+.hasil-table thead {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.hasil-table th {
+  padding: 1rem;
+  text-align: left;
+  font-weight: 600;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+}
+
+.hasil-table td {
+  padding: 1rem;
+  border-bottom: 1px solid #e5e7eb;
+  color: #374151;
+  font-size: 0.875rem;
+}
+
+.hasil-table tbody tr {
+  transition: background-color 0.2s ease;
+}
+
+.hasil-table tbody tr:hover {
+  background: #f9fafb;
+}
+
+.hasil-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* ====================================== */
+/* BADGES */
+/* ====================================== */
+.hasil-badge {
+  display: inline-block;
+  padding: 0.35rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.hasil-badge-turun {
+  background: #fee;
+  color: #c91f16;
+}
+
+.hasil-badge-naik {
+  background: #fef0e0;
+  color: #d97706;
+}
+
+.hasil-badge-seimbang {
+  background: #d1fae5;
+  color: #059669;
+}
+
+/* ====================================== */
+/* ACTION BUTTONS */
+/* ====================================== */
+.hasil-btn-detail {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.hasil-btn-detail:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.35);
+}
+
+.hasil-btn-detail:active {
+  transform: translateY(0);
+}
+
+/* ====================================== */
+/* MODAL STYLES */
+/* ====================================== */
+.hasil-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  overflow-y: auto;
+}
+
+.hasil-modal.active {
+  display: flex;
+}
+
+.hasil-modal-content {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  max-width: 900px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.hasil-modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: #f3f4f6;
+  border: none;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6b7280;
+  transition: all 0.2s ease;
+  z-index: 10;
+}
+
+.hasil-modal-close:hover {
+  background: #e5e7eb;
+  color: #374151;
+}
+
+.hasil-modal-body h2 {
+  margin: 0 0 1.5rem 0;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #374151;
+  border-bottom: 2px solid #f3f4f6;
+  padding-bottom: 1rem;
+}
+
+.hasil-modal-body h3 {
+  margin: 1.5rem 0 1rem 0;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #374151;
+}
+
+.hasil-modal-loading {
+  text-align: center;
+  padding: 3rem 1rem;
+  color: #6b7280;
+}
+
+/* ====================================== */
+/* DETAIL GRID (MODAL) */
+/* ====================================== */
+.hasil-detail-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.hasil-detail-group {
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 1.5rem;
+}
+
+.hasil-detail-group h3 {
+  margin: 0 0 1rem 0;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #667eea;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-bottom: 2px solid #e5e7eb;
+  padding-bottom: 0.75rem;
+}
+
+.hasil-detail-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.65rem 0;
+  border-bottom: 1px solid rgba(229, 231, 235, 0.6);
+}
+
+.hasil-detail-row:last-child {
+  border-bottom: none;
+}
+
+.hasil-detail-row span {
+  color: #6b7280;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.hasil-detail-row strong {
+  color: #374151;
+  font-weight: 600;
+  font-size: 0.875rem;
+  text-align: right;
+}
+
+/* ====================================== */
+/* CATATAN PETUGAS (MODAL) */
+/* ====================================== */
+.hasil-catatan-petugas {
+  background: white;
+  border-radius: 10px;
+  border-left: 4px solid #667eea;
+  margin-bottom: 2rem;
+  overflow: hidden;
+}
+
+.hasil-catatan-petugas .catatan-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 1.5rem;
+  background: linear-gradient(135deg, #f0f3ff 0%, #e8ecff 100%);
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.hasil-catatan-petugas .catatan-header h3 {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 700;
+  color: #374151;
+}
+
+.hasil-catatan-petugas .catatan-icon {
+  font-size: 1.2rem;
+}
+
+.hasil-catatan-petugas .catatan-body {
+  padding: 1rem 1.5rem;
+}
+
+.hasil-catatan-petugas .catatan-body p {
+  margin: 0;
+  font-size: 14px;
+  color: #374151;
+  line-height: 1.7;
+  white-space: pre-wrap;
+}
+
+/* ====================================== */
+/* FOODS TABLE (MODAL) */
+/* ====================================== */
+.hasil-foods-table {
+  overflow-x: auto;
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;
+}
+
+.hasil-foods-table table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+}
+
+.hasil-foods-table thead {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.hasil-foods-table th {
+  padding: 1rem;
+  text-align: left;
+  font-weight: 600;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+}
+
+.hasil-foods-table td {
+  padding: 0.9rem 1rem;
+  border-bottom: 1px solid #e5e7eb;
+  color: #374151;
+  font-size: 0.875rem;
+}
+
+.hasil-foods-table tbody tr {
+  transition: background-color 0.2s ease;
+}
+
+.hasil-foods-table tbody tr:hover {
+  background: #f9fafb;
+}
+
+.hasil-foods-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* ====================================== */
+/* SIMILARITY BAR */
+/* ====================================== */
+.hasil-similarity-bar {
+  display: inline-flex;
+  align-items: center;
+  height: 18px;
+  width: 90px;
+  background: #e5e7eb;
+  border-radius: 4px;
+  overflow: hidden;
+  vertical-align: middle;
+  margin-right: 6px;
+}
+
+.hasil-similarity-fill {
+  display: block;
+  height: 100%;
+  background: linear-gradient(90deg, #10b981 0%, #059669 100%);
+  transition: width 0.3s ease;
+}
+
+/* ====================================== */
+/* LOADING STATE */
+/* ====================================== */
+.hasil-loading {
+  color: #6b7280;
+  font-size: 14px;
+}
+
+/* ====================================== */
+/* RESPONSIVE */
+/* ====================================== */
+@media (max-width: 768px) {
+  .hasil-overview-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .hasil-detail-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hasil-table th,
+  .hasil-table td {
+    padding: 0.75rem 0.6rem;
+    font-size: 0.8rem;
+  }
+
+  .hasil-modal-content {
+    padding: 1.5rem;
+    margin: auto 0;
+    max-height: 95vh;
+  }
+
+  .hasil-foods-table th,
+  .hasil-foods-table td {
+    padding: 0.75rem 0.6rem;
+    font-size: 0.8rem;
+  }
+
+  .hasil-similarity-bar {
+    width: 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hasil-table th,
+  .hasil-table td {
+    padding: 0.6rem 0.4rem;
+    font-size: 0.75rem;
+  }
+
+  .hasil-modal-content {
+    padding: 1rem;
+  }
+
+  .hasil-detail-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.3rem;
+  }
+
+  .hasil-detail-row strong {
+    text-align: left;
+  }
+}

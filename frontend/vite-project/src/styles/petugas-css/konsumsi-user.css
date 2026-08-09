@@ -1,0 +1,235 @@
+/* ==================== KONSUMSI USER (PETUGAS VIEW) STYLES ==================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.konsumsi-pt-wrapper {
+  display: flex;
+  height: 100vh;
+  background-color: #f8fafc;
+}
+
+.konsumsi-pt-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  overflow: hidden;
+}
+
+.konsumsi-pt-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow-y: auto;
+  background-color: #f8fafc;
+}
+
+/* TOPBAR */
+.konsumsi-pt-topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem 2rem;
+  background: #fff;
+  border-bottom: 1px solid #e2e8f0;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.konsumsi-pt-topbar-title h1 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #1a202c;
+}
+
+.konsumsi-pt-topbar-title p {
+  font-size: 0.85rem;
+  color: #718096;
+  margin-top: 2px;
+}
+
+.konsumsi-pt-topbar-user {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.konsumsi-pt-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #3182ce, #1a365d);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.konsumsi-pt-user-name { font-weight: 600; font-size: 0.9rem; color: #2d3748; }
+.konsumsi-pt-user-role { font-size: 0.75rem; color: #a0aec0; }
+
+/* CONTENT */
+.konsumsi-pt-content {
+  padding: 1.5rem 2rem;
+}
+
+/* SUMMARY CARDS */
+.konsumsi-pt-summary {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.konsumsi-pt-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 1.1rem 1.25rem;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.07);
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.konsumsi-pt-card .card-icon {
+  font-size: 1.6rem;
+}
+
+.konsumsi-pt-card .card-value {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #2d3748;
+}
+
+.konsumsi-pt-card .card-label {
+  font-size: 0.8rem;
+  color: #718096;
+}
+
+/* TABLE CARD */
+.konsumsi-pt-table-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.07);
+  overflow: hidden;
+}
+
+.konsumsi-pt-table-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.1rem 1.5rem;
+  border-bottom: 1px solid #e2e8f0;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.konsumsi-pt-table-header h2 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #1a202c;
+}
+
+.konsumsi-pt-filters {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  flex-wrap: wrap;
+}
+
+.konsumsi-pt-filter-input,
+.konsumsi-pt-filter-select {
+  padding: 0.5rem 0.85rem;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  color: #2d3748;
+  outline: none;
+  background: #f8fafc;
+}
+
+.konsumsi-pt-filter-input:focus,
+.konsumsi-pt-filter-select:focus { border-color: #3182ce; }
+
+.konsumsi-pt-table-responsive {
+  overflow-x: auto;
+}
+
+.konsumsi-pt-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+}
+
+.konsumsi-pt-table thead th {
+  background: #f7fafc;
+  color: #4a5568;
+  font-weight: 600;
+  padding: 0.75rem 1rem;
+  text-align: left;
+  border-bottom: 2px solid #e2e8f0;
+  white-space: nowrap;
+}
+
+.konsumsi-pt-table tbody tr {
+  border-bottom: 1px solid #f1f5f9;
+  transition: background 0.15s;
+}
+
+.konsumsi-pt-table tbody tr:hover {
+  background: #ebf8ff;
+}
+
+.konsumsi-pt-table tbody td {
+  padding: 0.75rem 1rem;
+  color: #2d3748;
+  vertical-align: middle;
+}
+
+.waktu-badge { padding: 0.25rem 0.7rem; border-radius: 20px; font-size: 0.78rem; font-weight: 600; display: inline-block; }
+.waktu-pagi    { background: #fef3c7; color: #b45309; }
+.waktu-siang   { background: #d1fae5; color: #065f46; }
+.waktu-sore    { background: #fee2e2; color: #b91c1c; }
+.waktu-malam   { background: #ede9fe; color: #6d28d9; }
+.waktu-minuman { background: #dbeafe; color: #1e40af; }
+
+.user-badge-pt {
+  background: #edf2f7;
+  color: #4a5568;
+  padding: 0.2rem 0.65rem;
+  border-radius: 20px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  display: inline-block;
+}
+
+.action-buttons { display: flex; gap: 0.4rem; }
+
+.btn-icon {
+  width: 32px; height: 32px; border-radius: 7px; border: none; cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.85rem; transition: opacity 0.2s;
+}
+.btn-icon:hover { opacity: 0.8; }
+.btn-icon.delete { background: #fff5f5; color: #c53030; }
+
+.empty-row td {
+  text-align: center;
+  padding: 2.5rem 1rem;
+  color: #a0aec0;
+  font-size: 0.9rem;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .konsumsi-pt-content { padding: 1rem; }
+  .konsumsi-pt-topbar { padding: 1rem; }
+  .konsumsi-pt-table-header { flex-direction: column; align-items: flex-start; }
+}

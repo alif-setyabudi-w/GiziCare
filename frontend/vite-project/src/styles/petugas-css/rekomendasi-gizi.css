@@ -1,0 +1,801 @@
+/* ==================== REKOMENDASI GIZI PETUGAS STYLES ==================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+}
+
+.rekomendasi-wrapper {
+  display: flex;
+  min-height: 100vh;
+  background-color: #f8fafc;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+}
+
+.rekomendasi-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.rekomendasi-main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  background-color: #f8fafc;
+}
+
+/* ==================== TOPBAR ==================== */
+
+.rekomendasi-topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  background: white;
+  border-bottom: 1px solid #e2e8f0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.rekomendasi-topbar-left {
+  flex: 1;
+}
+
+.rekomendasi-topbar-title h1 {
+  font-size: 1.75rem;
+  color: #1a202c;
+  margin-bottom: 0.25rem;
+  font-weight: 700;
+}
+
+.rekomendasi-topbar-title p {
+  color: #718096;
+  font-size: 0.875rem;
+}
+
+.rekomendasi-topbar-user {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding-left: 2rem;
+  border-left: 1px solid #e2e8f0;
+}
+
+.rekomendasi-user-avatar {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.rekomendasi-user-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.rekomendasi-user-name {
+  font-weight: 600;
+  color: #1a202c;
+  font-size: 0.95rem;
+}
+
+.rekomendasi-user-role {
+  color: #718096;
+  font-size: 0.8rem;
+}
+
+/* ==================== CONTENT AREA ==================== */
+
+.rekomendasi-content {
+  flex: 1;
+  padding: 2rem;
+  overflow-y: auto;
+}
+
+/* ==================== FORM SECTION ==================== */
+
+.rekomendasi-form-section {
+  background: white;
+  border-radius: 0.75rem;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e2e8f0;
+}
+
+.rekomendasi-form-section h2 {
+  font-size: 1.5rem;
+  color:#1a202c;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.rekomendasi-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.rekomendasi-form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.rekomendasi-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.rekomendasi-label {
+  font-weight: 600;
+  color: #2d3748;
+  font-size: 0.95rem;
+}
+
+.rekomendasi-label::after {
+  content: " *";
+  color: #e53e3e;
+}
+
+.rekomendasi-required {
+  display: inline-block;
+  font-size: 0.8rem;
+  color: #d97706;
+  font-weight: 500;
+  margin-left: 0.5rem;
+  background-color: #fef3c7;
+  padding: 0.125rem 0.5rem;
+  border-radius: 0.25rem;
+}
+
+.rekomendasi-input,
+.rekomendasi-select {
+  padding: 0.75rem 1rem;
+  border: 1px solid #cbd5e0;
+  border-radius: 0.5rem;
+  font-size: 0.95rem;
+  font-family: inherit;
+  transition: all 0.3s ease;
+  background-color: white;
+  color: #1a202c;
+}
+
+.rekomendasi-input:focus,
+.rekomendasi-select:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+  background-color: #f7fafc;
+}
+
+.rekomendasi-input::placeholder {
+  color: #a0aec0;
+}
+
+.rekomendasi-select {
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  background-size: 1.25rem;
+  padding-right: 2.5rem;
+}
+
+.rekomendasi-form-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.rekomendasi-btn-submit,
+.rekomendasi-btn-reset {
+  padding: 0.875rem 2rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: inherit;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.rekomendasi-btn-submit {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  flex: 1;
+  min-width: 200px;
+  justify-content: center;
+}
+
+.rekomendasi-btn-submit:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+}
+
+.rekomendasi-btn-submit:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.rekomendasi-btn-reset {
+  background-color: #e2e8f0;
+  color: #2d3748;
+  min-width: 150px;
+  justify-content: center;
+}
+
+.rekomendasi-btn-reset:hover {
+  background-color: #cbd5e0;
+  transform: translateY(-2px);
+}
+
+/* ==================== ALERT MESSAGES ==================== */
+
+.rekomendasi-alert {
+  padding: 1rem 1.5rem;
+  border-radius: 0.5rem;
+  margin-bottom: 1.5rem;
+  border-left: 4px solid #667eea;
+  background-color: #edf2f7;
+  color: #2d3748;
+}
+
+.rekomendasi-alert.alert-error {
+  border-left-color: #e53e3e;
+  background-color: #fed7d7;
+  color: #742a2a;
+}
+
+.rekomendasi-alert.alert-success {
+  border-left-color: #38a169;
+  background-color: #c6f6d5;
+  color: #22543d;
+}
+
+.rekomendasi-alert.alert-warning {
+  border-left-color: #d97706;
+  background-color: #fed7aa;
+  color: #78350f;
+}
+
+.alert-content {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.alert-content strong {
+  font-weight: 700;
+}
+
+/* ==================== RESULTS SECTION ==================== */
+
+.rekomendasi-results-section {
+  background: white;
+  border-radius: 0.75rem;
+  padding: 2rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e2e8f0;
+}
+
+.rekomendasi-hasil-header {
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 2px solid #e2e8f0;
+}
+
+.rekomendasi-hasil-header h2 {
+  font-size: 1.5rem;
+  color: #1a202c;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.rekomendasi-profile-info {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.profile-summary {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+}
+
+.profile-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  padding: 0.75rem 1rem;
+  background-color: #f7fafc;
+  border-radius: 0.5rem;
+  border-left: 3px solid #667eea;
+}
+
+.profile-label {
+  font-size: 0.8rem;
+  color: #718096;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.profile-value {
+  font-size: 1rem;
+  color: #1a202c;
+  font-weight: 700;
+}
+
+/* ==================== RECOMMENDATIONS LIST ==================== */
+
+.rekomendasi-results-container {
+  margin-bottom: 2rem;
+}
+
+.recommendations-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.recommendation-card {
+  background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
+  border: 1px solid #e2e8f0;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.recommendation-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  border-color: #667eea;
+}
+
+.recommendation-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #cbd5e0;
+}
+
+.recommendation-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 2.5rem;
+  height: 2.5rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-radius: 50%;
+  font-weight: 700;
+  font-size: 0.9rem;
+  flex-shrink: 0;
+}
+
+.recommendation-name {
+  flex: 1;
+  font-size: 1.1rem;
+  color: #1a202c;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.recommendation-similarity {
+  background-color: #d6f5ff;
+  color: #0987a0;
+  padding: 0.35rem 0.75rem;
+  border-radius: 9999px;
+  font-weight: 700;
+  font-size: 0.8rem;
+  white-space: nowrap;
+}
+
+.recommendation-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.detail-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0;
+}
+
+.detail-label {
+  font-size: 0.9rem;
+  color: #4a5568;
+  font-weight: 500;
+}
+
+.detail-value {
+  font-size: 1rem;
+  color: #1a202c;
+  font-weight: 700;
+  background-color: white;
+  padding: 0.35rem 0.75rem;
+  border-radius: 0.35rem;
+  min-width: 80px;
+  text-align: right;
+}
+
+.no-results {
+  text-align: center;
+  padding: 3rem 2rem;
+  color: #718096;
+}
+
+.no-results p {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+/* ==================== EXPORT ACTIONS ==================== */
+
+.rekomendasi-export-actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #e2e8f0;
+}
+
+.rekomendasi-btn-print,
+.rekomendasi-btn-download {
+  padding: 0.75rem 1.5rem;
+  border: 1px solid #cbd5e0;
+  border-radius: 0.5rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: inherit;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: white;
+  color: #2d3748;
+}
+
+.rekomendasi-btn-print:hover {
+  border-color: #667eea;
+  background-color: #edf2f7;
+  color: #667eea;
+}
+
+.rekomendasi-btn-download:hover {
+  border-color: #38a169;
+  background-color: #c6f6d5;
+  color: #22543d;
+}
+
+/* ==================== PRINT STYLES ==================== */
+
+@media print {
+  body {
+    background-color: white;
+  }
+
+  .rekomendasi-wrapper {
+    background-color: white;
+  }
+
+  [class*="sidebar-"] {
+    display: none;
+  }
+
+  .rekomendasi-topbar {
+    display: none;
+  }
+
+  .rekomendasi-form-section {
+    display: none;
+  }
+
+  .rekomendasi-export-actions {
+    display: none;
+  }
+
+  .rekomendasi-results-section {
+    box-shadow: none;
+    border: none;
+    padding: 0;
+  }
+
+  .recommendation-card {
+    page-break-inside: avoid;
+  }
+}
+
+/* ==================== RESPONSIVE DESIGN ==================== */
+
+@media (max-width: 1024px) {
+  .rekomendasi-topbar {
+    gap: 1rem;
+    height: 100px;
+  }
+  .rekomendasi-topbar-left {
+    width: 100%;
+  }
+
+  .rekomendasi-topbar-user {
+    padding-left: 0;
+    border-left: none;
+    justify-content: center;
+  }
+
+  .rekomendasi-form-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .recommendations-list {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .rekomendasi-content {
+    padding: 1rem;
+  }
+
+  .rekomendasi-form-section,
+  .rekomendasi-results-section {
+    padding: 1.5rem;
+  }
+
+  .rekomendasi-form-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .rekomendasi-form-actions {
+    flex-direction: column;
+  }
+
+  .rekomendasi-btn-submit,
+  .rekomendasi-btn-reset {
+    width: 100%;
+    min-width: unset;
+  }
+
+  .rekomendasi-topbar {
+    padding: 1rem;
+  }
+
+  .rekomendasi-topbar-user{
+    padding-left: 2%;
+  }
+
+  .rekomendasi-topbar-left{
+    width: 60%;
+  }
+
+  .recommendations-list {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-summary {
+    grid-template-columns: 1fr;
+  }
+
+  .rekomendasi-topbar-title h1 {
+    font-size: 15px;
+  }
+
+  .rekomendasi-topbar-title p {
+    font-size: 12px;
+  }
+
+  .rekomendasi-export-actions {
+    flex-direction: column;
+  }
+
+  .rekomendasi-btn-print,
+  .rekomendasi-btn-download {
+    width: 100%;
+  }
+}
+
+@media (max-width: 650px) {
+  .rekomendasi-topbar {
+    padding: 1rem;
+  }
+
+  .rekomendasi-topbar-user {
+    align-items: flex-start;
+    gap: 0.5rem;
+    padding-top: 0.5rem;
+  }
+
+  .rekomendasi-user-name{
+    font-size: 13px;
+  }
+
+  .rekomendasi-topbar-left{
+    width: 60%;
+  }
+  .rekomendasi-topbar-title h1 {
+    font-size: 15px;
+  }
+
+  .rekomendasi-topbar-title p {
+    font-size: 12px;
+  }
+
+  .rekomendasi-form-section,
+  .rekomendasi-results-section {
+    padding: 1rem;
+  }
+
+  .recommendation-card {
+    padding: 1rem;
+  }
+
+  .profile-item {
+    padding: 0.5rem;
+    font-size: 0.85rem;
+  }
+
+  .recommendation-details {
+    gap: 0.5rem;
+  }
+
+  .detail-row {
+    padding: 0.35rem 0;
+  }
+
+  .rekomendasi-form-grid {
+    grid-template-columns: repeat(2, 200px);
+    justify-content: center;
+  }
+
+  .rekomendasi-label{
+    font-size: 12px;
+  }
+
+  .rekomendasi-input{
+    font-size: 10px;
+  }
+
+  .rekomendasi-select{
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 470px) {
+  .rekomendasi-form-grid {
+    grid-template-columns: 1fr;
+    justify-content: center;  
+  }
+}
+/* ==================== DARK MODE SUPPORT ==================== */
+
+@media (prefers-color-scheme: dark) {
+  .rekomendasi-wrapper {
+    background-color: #1a202c;
+  }
+
+  .rekomendasi-form-section,
+  .rekomendasi-results-section {
+    background: #2d3748;
+    border-color: #4a5568;
+  }
+
+  .rekomendasi-form-section h2 {
+    color:#d6f5ff;
+  }
+
+  .rekomendasi-topbar {
+    background: #2d3748;
+    border-bottom-color: #4a5568;
+  }
+
+  .rekomendasi-topbar-title h1 {
+    color: #e2e8f0;
+  }
+
+  .rekomendasi-topbar-title p,
+  .rekomendasi-user-role {
+    color: #a0aec0;
+  }
+
+  .rekomendasi-user-name {
+    color: #e2e8f0;
+  }
+
+  .rekomendasi-label {
+    color: #cbd5e0;
+  }
+
+  .rekomendasi-input,
+  .rekomendasi-select {
+    background-color: #1a202c;
+    border-color: #4a5568;
+    color: #e2e8f0;
+  }
+
+  .rekomendasi-input:focus,
+  .rekomendasi-select:focus {
+    background-color: #2d3748;
+    border-color: #667eea;
+  }
+
+  .recommendation-card {
+    background: #4a5568;
+    border-color: #4a5568;
+  }
+
+  .recommendation-name {
+    color: #e2e8f0;
+  }
+
+  .detail-label {
+    color: #cbd5e0;
+  }
+
+  .detail-value {
+    background-color: #2d3748;
+    color: #e2e8f0;
+  }
+
+  .profile-item {
+    background-color: #4a5568;
+    border-left-color: #667eea;
+  }
+
+  .profile-value {
+    color: #e2e8f0;
+  }
+
+  .rekomendasi-btn-reset {
+    background-color: #4a5568;
+    color: #e2e8f0;
+    border-color: #4a5568;
+  }
+
+  .rekomendasi-btn-reset:hover {
+    background-color: #5a6b7d;
+  }
+
+  .rekomendasi-btn-print,
+  .rekomendasi-btn-download {
+    background-color: #2d3748;
+    color: #e2e8f0;
+    border-color: #4a5568;
+  }
+}

@@ -1,0 +1,1099 @@
+/* ==================== HASIL REKOMENDASI STYLES ==================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.hasil-rekomendasi-wrapper {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  background-color: #f8fafc;
+  position: relative;
+}
+
+.hasil-rekomendasi-main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  background-color: #f8fafc;
+}
+
+.hasil-rekomendasi-empty {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.empty-state {
+  text-align: center;
+  background: white;
+  padding: 3rem 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.empty-icon {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+.empty-state h2 {
+  color: #1a202c;
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+}
+
+.empty-state p {
+  color: #718096;
+  margin-bottom: 1.5rem;
+}
+
+/* ==================== TOPBAR ==================== */
+
+.hasil-rekomendasi-topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  background: white;
+  border-bottom: 1px solid #e2e8f0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.hasil-rekomendasi-topbar-left {
+  flex: 1;
+}
+
+.hasil-rekomendasi-topbar-title h1 {
+  font-size: 1.75rem;
+  color: #1a202c;
+  margin-bottom: 0.25rem;
+  font-weight: 700;
+}
+
+.hasil-rekomendasi-topbar-title p {
+  color: #718096;
+  font-size: 0.875rem;
+}
+
+.hasil-rekomendasi-topbar-user {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding-left: 2rem;
+  border-left: 1px solid #e2e8f0;
+}
+
+.hasil-rekomendasi-user-avatar {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.hasil-rekomendasi-user-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.hasil-rekomendasi-user-name {
+  font-weight: 600;
+  color: #1a202c;
+  font-size: 0.95rem;
+}
+
+.hasil-rekomendasi-user-role {
+  color: #718096;
+  font-size: 0.8rem;
+}
+
+/* ==================== CONTENT AREA ==================== */
+
+.hasil-rekomendasi-content {
+  flex: 1;
+  padding: 2rem;
+  overflow-y: auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* ==================== PROFILE SECTION ==================== */
+
+.hasil-rekomendasi-profile-section,
+.hasil-rekomendasi-analysis-section,
+.hasil-rekomendasi-foods-section {
+  margin-bottom: 2rem;
+}
+
+.hasil-rekomendasi-profile-section h2,
+.hasil-rekomendasi-analysis-section h2,
+.hasil-rekomendasi-foods-section h2 {
+  font-size: 1.25rem;
+  color: #1a202c;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+}
+
+.hasil-rekomendasi-profile-card,
+.hasil-rekomendasi-analysis-card {
+  background: white;
+  border-radius: 0.75rem;
+  padding: 2rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e2e8f0;
+  width: 100%;
+  max-width: 100%;
+}
+
+
+.profile-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 100%;
+}
+
+@media (min-width: 600px) {
+  .profile-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .profile-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}
+
+.profile-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1rem;
+  background-color: #f7fafc;
+  border-radius: 0.5rem;
+  border-left: 3px solid #667eea;
+}
+
+.item-label {
+  font-size: 0.8rem;
+  color: #718096;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.item-value {
+  font-size: 1.1rem;
+  color: #1a202c;
+  font-weight: 700;
+}
+
+/* ==================== ANALYSIS SECTION ==================== */
+
+.analysis-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 100%;
+}
+
+.analysis-item {
+  background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  border: 1px solid #e2e8f0;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.analysis-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  border-color: #667eea;
+}
+
+.analysis-label {
+  font-size: 0.9rem;
+  color: #4a5568;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  text-transform: uppercase;
+}
+
+.analysis-value {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #1a202c;
+  margin-bottom: 0.5rem;
+}
+
+.analysis-status {
+  font-size: 0.85rem;
+  color: #718096;
+  font-weight: 500;
+}
+
+/* ==================== FOODS SECTION ==================== */
+
+
+.hasil-rekomendasi-foods-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+@media (min-width: 600px) {
+  .hasil-rekomendasi-foods-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .hasil-rekomendasi-foods-grid {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  }
+}
+
+.food-card {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.food-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  border-color: #667eea;
+}
+
+.food-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #cbd5e0;
+  flex-wrap: wrap;
+}
+
+.food-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 2.5rem;
+  height: 2.5rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-radius: 50%;
+  font-weight: 700;
+  font-size: 0.9rem;
+  flex-shrink: 0;
+}
+
+.food-name {
+  flex: 1;
+  font-size: 1.1rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.food-similarity {
+  padding: 0.4rem 0.8rem 0.4rem 0.5rem;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 0.85rem;
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease;
+}
+
+.food-card:hover .food-similarity {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.food-details {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.detail-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.detail-label {
+  font-size: 0.85rem;
+  color: #4a5568;
+  font-weight: 500;
+}
+
+.detail-value {
+  font-size: 1rem;
+  color: #1a202c;
+  font-weight: 700;
+  background-color: #f7fafc;
+  padding: 0.5rem;
+  border-radius: 0.35rem;
+}
+
+.no-recommendations {
+  text-align: center;
+  padding: 3rem 2rem;
+  background: white;
+  border-radius: 0.75rem;
+  color: #718096;
+  border: 1px solid #e2e8f0;
+}
+
+.no-recommendations p {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+/* ==================== ACTION BUTTONS ==================== */
+
+.hasil-rekomendasi-actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #e2e8f0;
+}
+
+.btn-back,
+.btn-save {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: inherit;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.btn-save {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  color: white;
+  flex: 1;
+  min-width: 150px;
+  justify-content: center;
+}
+
+.btn-save:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(16, 185, 129, 0.3);
+}
+
+.btn-save:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.btn-back {
+  background-color: #f0fdf4;
+  color: #22863a;
+  border: 1px solid #86efac;
+  min-width: 150px;
+  justify-content: center;
+}
+
+.btn-back:hover {
+  background-color: #dcfce7;
+  transform: translateY(-2px);
+}
+
+/* ==================== PRINT STYLES ==================== */
+
+@media print {
+  body {
+    background-color: white;
+  }
+
+  .hasil-rekomendasi-wrapper {
+    background-color: white;
+  }
+
+  [class*="sidebar-"] {
+    display: none;
+  }
+
+  .hasil-rekomendasi-topbar {
+    display: none;
+  }
+
+  .hasil-rekomendasi-actions {
+    display: none;
+  }
+
+  .food-card {
+    page-break-inside: avoid;
+  }
+
+  .analysis-item,
+  .food-card {
+    box-shadow: none;
+    border: 1px solid #d1d5db;
+  }
+}
+
+/* ==================== RESPONSIVE DESIGN ==================== */
+
+/* TABLET - 1024px and below */
+@media (max-width: 1024px) {
+
+  html,
+  body {
+    height: auto;
+    overflow: visible;
+  }
+
+  .hasil-rekomendasi-wrapper {
+    height: auto;
+  }
+
+  .hasil-rekomendasi-topbar {
+    gap: 1rem;
+    padding: 1.25rem;
+  }
+
+  .hasil-rekomendasi-topbar-left {
+    flex: 1 1 100%;
+  }
+
+  .hasil-rekomendasi-topbar-user {
+    flex: 1 1 auto;
+    border-left: none;
+    padding-left: 0;
+  }
+
+  .hasil-rekomendasi-content {
+    padding: 1.5rem;
+  }
+
+  .hasil-rekomendasi-profile-card,
+  .hasil-rekomendasi-analysis-card {
+    padding: 1.5rem;
+  }
+
+  .profile-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .analysis-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hasil-rekomendasi-foods-grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+
+  .food-details {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+  }
+}
+
+/* TABLET LANDSCAPE - 768px to 1024px */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .hasil-rekomendasi-foods-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .profile-item {
+    padding: 0.875rem;
+  }
+}
+
+/* TABLET PORTRAIT & MOBILE - 768px and below */
+@media (max-width: 768px) {
+
+  html,
+  body {
+    height: auto;
+    overflow: visible;
+  }
+
+  .hasil-rekomendasi-wrapper {
+    flex-direction: column;
+    height: auto;
+    min-height: 100vh;
+  }
+
+  .hasil-rekomendasi-main-content {
+    flex: none;
+  }
+
+  .hasil-rekomendasi-content {
+    padding: 1rem;
+    overflow-y: visible;
+    flex: none;
+  }
+
+  .hasil-rekomendasi-topbar {
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 1rem;
+    gap: 1rem;
+    position: relative;
+  }
+
+  .hasil-rekomendasi-topbar-title h1 {
+    font-size: 1.25rem;
+  }
+
+  .hasil-rekomendasi-topbar-title p {
+    font-size: 0.8rem;
+  }
+
+  .hasil-rekomendasi-topbar-user {
+    width: 50%;
+    border-left: 1px solid #e2e8f0;
+    padding-left: 1rem;
+  }
+
+  .hasil-rekomendasi-profile-card,
+  .hasil-rekomendasi-analysis-card {
+    padding: 1rem;
+    border-radius: 0.5rem;
+  }
+
+  .hasil-rekomendasi-profile-section h2,
+  .hasil-rekomendasi-analysis-section h2,
+  .hasil-rekomendasi-foods-section h2 {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+  }
+
+  .profile-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+  }
+
+  .profile-item {
+    padding: 0.75rem;
+    border-left: 3px solid #667eea;
+  }
+
+  .item-label {
+    font-size: 0.75rem;
+  }
+
+  .item-value {
+    font-size: 1rem;
+  }
+
+  .analysis-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+
+  .analysis-item {
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .analysis-label {
+    font-size: 0.8rem;
+  }
+
+  .analysis-value {
+    font-size: 1.5rem;
+  }
+
+  .hasil-rekomendasi-foods-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .food-card {
+    padding: 1rem;
+    border-radius: 0.5rem;
+  }
+
+  .food-header {
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.75rem;
+  }
+
+  .food-number {
+    min-width: 2rem;
+    height: 2rem;
+    font-size: 0.85rem;
+  }
+
+  .food-name {
+    font-size: 1rem;
+  }
+
+  .food-similarity {
+    padding: 0.3rem 0.6rem;
+    font-size: 0.8rem;
+  }
+
+  .food-details {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+
+  .detail-label {
+    font-size: 0.8rem;
+  }
+
+  .detail-value {
+    font-size: 0.95rem;
+    padding: 0.4rem;
+    text-align: left;
+  }
+
+  .hasil-rekomendasi-actions {
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+  }
+
+  .btn-print,
+  .btn-download,
+  .btn-back,
+  .btn-save {
+    width: 100%;
+    min-width: unset;
+    padding: 0.65rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .no-recommendations {
+    padding: 2rem 1rem;
+  }
+}
+
+/* MOBILE LANDSCAPE - 480px to 768px */
+@media (max-width: 768px) and (orientation: landscape) {
+  .hasil-rekomendasi-wrapper {
+    height: auto;
+  }
+
+  .hasil-rekomendasi-topbar {
+    padding: 0.75rem;
+    gap: 0.75rem;
+  }
+
+  .hasil-rekomendasi-topbar-title h1 {
+    font-size: 1.1rem;
+  }
+
+  .hasil-rekomendasi-content {
+    padding: 0.75rem;
+  }
+
+  .hasil-rekomendasi-profile-card,
+  .hasil-rekomendasi-analysis-card {
+    padding: 0.75rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .profile-grid {
+    gap: 0.5rem;
+  }
+
+  .food-card {
+    padding: 0.75rem;
+  }
+}
+
+/* MOBILE - 480px and below */
+@media (max-width: 550px) {
+
+  html,
+  body {
+    height: auto;
+    overflow: visible;
+  }
+
+  .hasil-rekomendasi-wrapper {
+    flex-direction: column;
+    height: auto;
+    width: 100%;
+  }
+
+  .hasil-rekomendasi-topbar {
+    padding: 0.75rem;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 0.65rem;
+    border-bottom: 1px solid #e2e8f0;
+  }
+
+  .hasil-rekomendasi-topbar-left {
+    width: 100%;
+  }
+
+  .hasil-rekomendasi-topbar-title h1 {
+    font-size: 1rem;
+    margin-bottom: 0.15rem;
+  }
+
+  .hasil-rekomendasi-topbar-title p {
+    font-size: 0.65rem;
+  }
+
+  .hasil-rekomendasi-topbar-user {
+    width: 50%;
+    border: none;
+    border-left: 1px solid #e2e8f0;
+    padding-left: 1rem;
+  }
+
+  .hasil-rekomendasi-user-avatar {
+    width: 1.75rem;
+    height: 1.75rem;
+    font-size: 0.75rem;
+  }
+
+  .hasil-rekomendasi-user-name {
+    font-size: 0.8rem;
+  }
+
+  .hasil-rekomendasi-user-role {
+    font-size: 0.65rem;
+  }
+
+  .hasil-rekomendasi-content {
+    padding: 0.65rem;
+    width: 100%;
+  }
+
+  .hasil-rekomendasi-profile-section,
+  .hasil-rekomendasi-analysis-section,
+  .hasil-rekomendasi-foods-section {
+    margin-bottom: 1rem;
+  }
+
+  .hasil-rekomendasi-profile-section h2,
+  .hasil-rekomendasi-analysis-section h2,
+  .hasil-rekomendasi-foods-section h2 {
+    font-size: 0.95rem;
+    margin-bottom: 0.65rem;
+    font-weight: 700;
+  }
+
+  .hasil-rekomendasi-profile-card,
+  .hasil-rekomendasi-analysis-card {
+    padding: 0.65rem;
+    border-radius: 0.5rem;
+  }
+
+  .profile-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.4rem;
+  }
+
+  .profile-item {
+    padding: 0.4rem;
+    border-left: 2px solid #667eea;
+    gap: 0.2rem;
+  }
+
+  .item-label {
+    font-size: 0.65rem;
+    font-weight: 500;
+  }
+
+  .item-value {
+    font-size: 0.9rem;
+    font-weight: 700;
+  }
+
+  .analysis-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.65rem;
+  }
+
+  .analysis-item {
+    padding: 0.65rem;
+    border-radius: 0.5rem;
+    text-align: center;
+  }
+
+  .analysis-label {
+    font-size: 0.7rem;
+    margin-bottom: 0.35rem;
+  }
+
+  .analysis-value {
+    font-size: 1.25rem;
+    margin-bottom: 0.3rem;
+  }
+
+  .analysis-status {
+    font-size: 0.75rem;
+  }
+
+  .hasil-rekomendasi-foods-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+  }
+
+  .food-card {
+    padding: 0.65rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  }
+
+  .food-header {
+    gap: 0.35rem;
+    margin-bottom: 0.5rem;
+    padding-bottom: 0.35rem;
+  }
+
+  .food-number {
+    min-width: 1.5rem;
+    height: 1.5rem;
+    font-size: 0.75rem;
+  }
+
+  .food-name {
+    font-size: 0.85rem;
+    font-weight: 700;
+    line-height: 1.1;
+  }
+
+  .food-similarity {
+    padding: 0.2rem 0.4rem;
+    font-size: 0.7rem;
+  }
+
+  .food-details {
+    grid-template-columns: 1fr;
+    gap: 0.35rem;
+  }
+
+  .detail-item {
+    gap: 0.2rem;
+  }
+
+  .detail-label {
+    font-size: 0.7rem;
+  }
+
+  .detail-value {
+    font-size: 0.8rem;
+    padding: 0.25rem;
+    border-radius: 0.25rem;
+  }
+
+  .empty-state {
+    padding: 1.25rem 0.75rem;
+    border-radius: 0.5rem;
+  }
+
+  .empty-icon {
+    font-size: 2.25rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .empty-state h2 {
+    font-size: 1rem;
+    margin-bottom: 0.3rem;
+  }
+
+  .empty-state p {
+    font-size: 0.85rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .no-recommendations {
+    padding: 1.25rem 0.65rem;
+    border-radius: 0.5rem;
+    font-size: 0.9rem;
+  }
+
+  .hasil-rekomendasi-actions {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    padding-top: 0.65rem;
+  }
+
+  .btn-print,
+  .btn-download,
+  .btn-back,
+  .btn-save {
+    width: 20%;
+    min-width: unset;
+    padding: 0.55rem 0.65rem;
+    border-radius: 0.375rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.3rem;
+  }
+
+  .btn-save {
+    flex: none;
+  }
+
+  .btn-print {
+    flex: none;
+  }
+
+  .btn-download {
+    flex: none;
+  }
+
+  .btn-back {
+    width: 34%;
+    flex: none;
+  }
+}
+
+/* ==================== DARK MODE SUPPORT ==================== */
+
+@media (prefers-color-scheme: dark) {
+  .hasil-rekomendasi-wrapper {
+    background-color: #1a202c;
+  }
+
+  .hasil-rekomendasi-profile-card,
+  .hasil-rekomendasi-analysis-card {
+    background: #2d3748;
+    border-color: #4a5568;
+  }
+
+  .hasil-rekomendasi-topbar {
+    background: #2d3748;
+    border-bottom-color: #4a5568;
+  }
+
+  .hasil-rekomendasi-topbar-title h1 {
+    color: #e2e8f0;
+  }
+
+  .hasil-rekomendasi-topbar-title p,
+  .hasil-rekomendasi-user-role {
+    color: #a0aec0;
+  }
+
+  .hasil-rekomendasi-user-name {
+    color: #e2e8f0;
+  }
+
+  .profile-item {
+    background-color: #4a5568;
+    border-left-color: #667eea;
+  }
+
+  .item-value {
+    color: #fffefe;
+  }
+
+  .analysis-item {
+    background: #4a5568;
+    border-color: #4a5568;
+  }
+
+  .analysis-label,
+  .detail-label {
+    color: #cbd5e0;
+  }
+
+  .analysis-value,
+  .food-name {
+    color: #e2e8f0;
+  }
+
+  .analysis-status {
+    color: #a0aec0;
+  }
+
+  .food-card {
+    background: #2d3748;
+    border-color: #4a5568;
+  }
+
+  .food-header {
+    border-bottom-color: #4a5568;
+  }
+
+  .detail-value {
+    background-color: #4a5568;
+    color: #e2e8f0;
+  }
+
+  .no-recommendations {
+    background: #2d3748;
+    border-color: #4a5568;
+    color: #a0aec0;
+  }
+
+  .btn-download {
+    background-color: #4a5568;
+    color: #e2e8f0;
+    border-color: #4a5568;
+  }
+
+  .btn-back {
+    background-color: #1f5a2c;
+    color: #86efac;
+    border-color: #22c55e;
+  }
+
+  .empty-state {
+    background: #2d3748;
+  }
+
+  .empty-state h2 {
+    color: #e2e8f0;
+  }
+
+  .empty-state p {
+    color: #a0aec0;
+  }
+}

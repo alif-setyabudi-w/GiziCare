@@ -1,0 +1,497 @@
+/* ==================== Data Gizi Page Specific ==================== */
+
+.data-gizi-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.data-gizi-container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* ==================== Data Gizi Main Content ==================== */
+.data-gizi-main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  overflow-x: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+.data-gizi-topbar {
+  background: white;
+  padding: 1.5rem 2rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  flex-shrink: 0;
+}
+
+.data-gizi-topbar-left {
+  display: flex;
+  width: 85%;
+  align-items: center;
+  gap: 1.5rem;
+  flex: 1;
+}
+
+.data-gizi-topbar-title h1 {
+  font-size: 1.8rem;
+  color: #2d3748;
+  margin: 0;
+}
+
+.data-gizi-topbar-title p {
+  font-size: 0.9rem;
+  color: #718096;
+  margin: 0.2rem 0 0;
+}
+
+.data-gizi-topbar-user {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.data-gizi-user-avatar {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 600;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+.data-gizi-user-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.data-gizi-user-info p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.data-gizi-user-name {
+  font-weight: 600;
+  color: #2d3748;
+}
+
+.data-gizi-user-role {
+  color: #718096;
+  font-size: 0.8rem;
+}
+
+/* ==================== Data Gizi Dashboard Content ==================== */
+.data-gizi-dashboard-content {
+  padding: 2rem;
+  overflow-y: auto;
+  overflow-x: hidden;
+  width: 100%;
+  flex: 1;
+}
+
+.data-gizi-page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.data-gizi-page-header h2 {
+  margin: 0;
+  color: #2d3748;
+  font-size: 1.5rem;
+}
+
+/* ==================== Data Gizi Table Section ==================== */
+.data-gizi-table-section {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  margin-bottom: 2rem;
+}
+
+.data-gizi-table-section h2 {
+  margin-top: 0;
+  color: #2d3748;
+  font-size: 1.3rem;
+  margin-bottom: 1.5rem;
+}
+
+.data-gizi-filters {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.data-gizi-filter-input,
+.data-gizi-filter-select {
+  padding: 0.8rem 1rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  min-width: 250px;
+  flex: 1;
+}
+
+.data-gizi-filter-input {
+  max-width: 500px;
+}
+
+.data-gizi-filter-input:focus,
+.data-gizi-filter-select:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+/* ==================== Data Gizi Table ==================== */
+.data-gizi-table-responsive {
+  overflow-x: auto;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+  -webkit-overflow-scrolling: touch;
+  max-width: 100%;
+  width: 100%;
+}
+
+.data-gizi-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  min-width: 500px;
+}
+
+.data-gizi-table thead {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.data-gizi-table th {
+  padding: 0.6rem 0.5rem;
+  text-align: left;
+  font-weight: 600;
+  white-space: nowrap;
+  font-size: 0.8rem;
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.data-gizi-table th:last-child {
+  border-right: none;
+}
+
+.data-gizi-table td {
+  padding: 0.5rem;
+  border-bottom: 1px solid #e2e8f0;
+  font-size: 0.8rem;
+}
+
+.data-gizi-table tbody tr {
+  transition: background 0.3s ease;
+}
+
+.data-gizi-table tbody tr:hover {
+  background: #f7fafc;
+}
+
+.data-gizi-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.kode-badge {
+  display: inline-block;
+  padding: 0.3rem 0.6rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* ==================== Status Badges ==================== */
+.data-gizi-status-badge {
+  display: inline-block;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.data-gizi-status-sayuran {
+  background: #c6f6d5;
+  color: #22543d;
+}
+
+.data-gizi-status-buah {
+  background: #feebc8;
+  color: #7c2d12;
+}
+
+.data-gizi-status-protein {
+  background: #bee3f8;
+  color: #2c5282;
+}
+
+.data-gizi-status-karbohidrat {
+  background: #fce8c3;
+  color: #78350f;
+}
+
+/* ==================== Action Buttons ==================== */
+.data-gizi-action-buttons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.data-gizi-btn,
+.data-gizi-btn-detail,
+.data-gizi-btn-edit,
+.data-gizi-btn-delete {
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.data-gizi-btn-primary {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.data-gizi-btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(102, 126, 234, 0.3);
+}
+
+.data-gizi-btn-detail {
+  background: #bee3f8;
+  color: #2c5282;
+  padding: 0.6rem 1.2rem;
+}
+
+.data-gizi-btn-detail:hover {
+  background: #90cdf4;
+  transform: translateY(-2px);
+}
+
+/* ==================== Stats Grid ==================== */
+.data-gizi-stats-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.data-gizi-stat-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  border-left: 4px solid #667eea;
+  transition: all 0.3s ease;
+  flex: 1 1 calc(25% - 1.125rem);
+  min-width: 200px;
+}
+
+.data-gizi-stat-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.data-gizi-stat-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.data-gizi-stat-icon {
+  font-size: 2rem;
+}
+
+.data-gizi-stat-card h3 {
+  color: #718096;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin: 0 0 0.5rem 0;
+}
+
+.data-gizi-stat-value {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #2d3748;
+}
+
+.data-gizi-stat-trend {
+  font-size: 0.85rem;
+  color: #718096;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #e2e8f0;
+}
+
+/* ==================== Loading State ==================== */
+.data-gizi-loading {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background: #edf2f7;
+  border-radius: 8px;
+  color: #4a5568;
+  font-weight: 500;
+}
+
+/* ==================== Responsive Design ==================== */
+@media (max-width: 1024px) {
+  .data-gizi-dashboard-content {
+    padding: 1rem;
+  }
+
+  .data-gizi-table-section {
+    padding: 1.5rem;
+  }
+
+  .data-gizi-stats-grid {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .data-gizi-stat-card {
+    flex: 1 1 calc(50% - 0.5rem);
+  }
+
+  .data-gizi-table th,
+  .data-gizi-table td {
+    padding: 0.6rem;
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .data-gizi-container {
+    flex-direction: column;
+  }
+
+  .data-gizi-topbar {
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  .data-gizi-topbar-title h1 {
+    font-size: 1.3rem;
+  }
+
+  .data-gizi-topbar-title p {
+    display: none;
+  }
+
+  .data-gizi-topbar-user {
+    gap: 0.8rem;
+  }
+
+  .data-gizi-user-info {
+    display: none;
+  }
+
+  .data-gizi-page-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .data-gizi-page-header h2 {
+    font-size: 1.2rem;
+  }
+
+  .data-gizi-filters {
+    flex-direction: column;
+  }
+
+  .data-gizi-filter-input,
+  .data-gizi-filter-select {
+    width: 100%;
+  }
+
+  .data-gizi-table th,
+  .data-gizi-table td {
+    padding: 0.5rem;
+    font-size: 0.8rem;
+  }
+
+  .data-gizi-action-buttons {
+    flex-direction: column;
+  }
+
+  .data-gizi-btn {
+    width: 100%;
+  }
+
+  .data-gizi-stats-grid {
+    flex-wrap: wrap;
+  }
+
+  .data-gizi-stat-card {
+    flex: 1 1 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .data-gizi-topbar-title h1 {
+    font-size: 1.1rem;
+  }
+
+  .data-gizi-user-avatar {
+    width: 36px;
+    height: 36px;
+    font-size: 1rem;
+  }
+
+  .data-gizi-page-header h2 {
+    font-size: 1rem;
+  }
+
+  .data-gizi-table-section {
+    padding: 1rem;
+  }
+
+  .data-gizi-table th,
+  .data-gizi-table td {
+    padding: 0.3rem;
+    font-size: 0.8rem;
+  }
+
+  .data-gizi-dashboard-content {
+    padding: 0.8rem;
+  }
+
+  .kode-badge{
+    font-size: 10px;
+  }
+}

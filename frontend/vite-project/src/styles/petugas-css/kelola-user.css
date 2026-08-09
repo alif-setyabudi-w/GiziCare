@@ -1,0 +1,383 @@
+/* === KELOLA USER PAGE === */
+
+.kelola-user-section {
+  background: white;
+  border-radius: 16px;
+  padding: 2.5rem;
+  border: 1px solid #f1f5f9;
+  box-shadow: 0 4px 12px -2px rgba(0, 0, 0, 0.06);
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 2px solid #f1f5f9;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.section-header h2 {
+  font-size: 1.35rem;
+  color: #0f172a;
+  margin: 0;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.section-stats {
+  background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+  color: #0051cc;
+  padding: 0.75rem 1.5rem;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  border: 1px solid #bfdbfe;
+}
+
+/* Filters */
+.kelola-user-filters {
+  margin-bottom: 2rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.kelola-user-search {
+  flex: 1;
+  padding: 1rem 1.25rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  background-color: #f8fafc;
+}
+
+.kelola-user-search:focus {
+  outline: none;
+  border-color: #3b82f6;
+  background-color: white;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+/* Table Responsive */
+.kelola-user-table-responsive {
+  overflow-x: auto;
+  border-radius: 12px;
+  border: 1px solid #f1f5f9;
+  background-color: #f8fafc;
+}
+
+.kelola-user-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+}
+
+.kelola-user-table thead {
+  background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+  border-bottom: 2px solid #3b82f6;
+}
+
+.kelola-user-table thead th {
+  padding: 1.25rem;
+  text-align: left;
+  color: #0051cc;
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-right: 1px solid #93c5fd;
+}
+
+.kelola-user-table thead th:last-child {
+  border-right: none;
+}
+
+.kelola-user-table tbody tr {
+  border-bottom: 1px solid #f1f5f9;
+  transition: all 0.3s ease;
+  animation: slideIn 0.4s ease;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.kelola-user-table tbody tr:hover {
+  background-color: #f8fafc;
+  box-shadow: inset 0 0 10px rgba(59, 130, 246, 0.05);
+}
+
+.kelola-user-table tbody tr:last-child {
+  border-bottom: none;
+}
+
+.kelola-user-table td {
+  padding: 1.25rem;
+  color: #334155;
+  font-size: 0.95rem;
+}
+
+.row-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+  color: #0051cc;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 0.85rem;
+}
+
+/* User Name */
+.user-name {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-weight: 600;
+  color: #0f172a;
+}
+
+.user-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  flex-shrink: 0;
+  box-shadow: 0 4px 8px -2px rgba(59, 130, 246, 0.2);
+}
+
+/* Email Badge */
+.email-badge {
+  display: inline-block;
+  padding: 0.5rem 0.75rem;
+  background-color: #f0fdf4;
+  color: #15803d;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  border: 1px solid #bbf7d0;
+}
+
+/* Address Text */
+.address-text {
+  color: #64748b;
+  font-size: 0.9rem;
+  max-width: 200px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+}
+
+/* Date Badge */
+.date-badge {
+  display: inline-block;
+  padding: 0.5rem 0.75rem;
+  background-color: #fef3c7;
+  color: #92400e;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  border: 1px solid #fcd34d;
+  white-space: nowrap;
+}
+
+/* Action Buttons */
+.action-buttons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.btn-detail {
+  padding: 0.5rem 1rem;
+  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.85rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 6px -1px rgba(59, 130, 246, 0.3);
+}
+
+.btn-detail:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px -2px rgba(59, 130, 246, 0.4);
+}
+
+.btn-detail:active {
+  transform: translateY(0);
+}
+
+.btn-delete {
+  padding: 0.5rem 1rem;
+  background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.85rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 6px -1px rgba(239, 68, 68, 0.3);
+}
+
+.btn-delete:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px -2px rgba(239, 68, 68, 0.4);
+}
+
+.btn-delete:active {
+  transform: translateY(0);
+}
+
+/* Loading State */
+.kelola-user-loading,
+.kelola-user-error,
+.kelola-user-empty {
+  text-align: center;
+  color: #94a3b8;
+}
+
+.kelola-user-loading p,
+.kelola-user-error p,
+.kelola-user-empty p {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #64748b;
+}
+
+.kelola-user-loading p::before {
+  content: '⏳ ';
+}
+
+.kelola-user-error p {
+  color: #991b1b;
+}
+
+.kelola-user-error small {
+  display: block;
+  margin-top: 0.5rem;
+  color: #dc2626;
+  font-size: 0.85rem;
+}
+
+.kelola-user-empty small {
+  display: block;
+  margin-top: 0.5rem;
+  color: #94a3b8;
+  font-size: 0.9rem;
+}
+
+/* Loading Animation */
+.loading-row td {
+  padding: 3rem 2rem !important;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .kelola-user-section {
+    padding: 2rem;
+  }
+
+  .kelola-user-table {
+    font-size: 0.85rem;
+  }
+
+  .kelola-user-table td {
+    padding: 1rem;
+  }
+
+  .address-text {
+    max-width: 150px;
+  }
+}
+
+@media (max-width: 768px) {
+  .kelola-user-section {
+    padding: 1.5rem;
+  }
+
+  .section-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .kelola-user-search {
+    font-size: 16px; /* Prevents zoom on iOS */
+  }
+
+  .kelola-user-table {
+    font-size: 0.8rem;
+  }
+
+  .kelola-user-table thead th {
+    padding: 0.75rem;
+    font-size: 0.75rem;
+  }
+
+  .kelola-user-table td {
+    padding: 0.75rem;
+  }
+
+  .user-name {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+  }
+
+  .user-avatar {
+    width: 32px;
+    height: 32px;
+    font-size: 0.8rem;
+  }
+
+  .address-text {
+    max-width: 100px;
+  }
+
+  .action-buttons {
+    flex-direction: column;
+  }
+
+  .btn-detail {
+    width: 100%;
+    padding: 0.4rem 0.5rem;
+    font-size: 0.75rem;
+  }
+
+  .row-number {
+    width: 28px;
+    height: 28px;
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .kelola-user-table-responsive {
+    overflow-x: auto;
+  }
+
+  .kelola-user-table {
+    min-width: 400px;
+  }
+}
