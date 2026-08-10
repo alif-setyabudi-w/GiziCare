@@ -49,10 +49,6 @@ CREATE TABLE `konsultasi` (
 --
 -- Dumping data untuk tabel `konsultasi`
 --
-
-INSERT INTO `konsultasi` (`id`, `user_id`, `nama`, `email`, `usia`, `jenis_kelamin`, `berat`, `tinggi`, `aktivitas`, `tujuan`, `kategori`, `catatan`, `status`, `respons`, `created_at`, `updated_at`) VALUES
-(27, 19, 'Alif Setyabudi', 'alifsetyabudi812004@gmail.com', 24, 'pria', 70.00, 170.00, 'sedang', 'turun', 'all', 'y', 'selesai', 'y', '2026-06-23 09:41:01', '2026-06-23 09:53:43');
-
 -- --------------------------------------------------------
 
 --
@@ -109,9 +105,6 @@ CREATE TABLE `rekomendasi` (
 -- Dumping data untuk tabel `rekomendasi`
 --
 
-INSERT INTO `rekomendasi` (`id`, `petugas_id`, `konsultasi_id`, `user_id`, `nama_user`, `email_user`, `usia`, `berat_badan`, `tinggi_badan`, `bmi`, `jenis_kelamin`, `aktivitas`, `tujuan`, `kategori`, `bmr`, `tdee`, `target_calories`, `target_protein_g`, `target_lemak_g`, `target_karbohidrat_g`, `jumlah_rekomendasi`, `keterangan`, `status`, `created_at`, `updated_at`) VALUES
-(45, 16, 27, 19, 'Alif Setyabudi', 'alifsetyabudi812004@gmail.com', 24, 70.00, 170.00, 24.22, 'pria', 'sedang', 'turun', 'all', 1705.73, 2643.89, 2247.30, 168.50, 74.90, 224.70, 7, 'Rekomendasi dibuat pada 23/6/2026, 16.44.58', 'aktif', '2026-06-23 09:44:58', '2026-06-23 09:53:43');
-
 -- --------------------------------------------------------
 
 --
@@ -137,16 +130,6 @@ CREATE TABLE `rekomendasi_detail` (
 --
 -- Dumping data untuk tabel `rekomendasi_detail`
 --
-
-INSERT INTO `rekomendasi_detail` (`id`, `rekomendasi_id`, `nama_makanan`, `kode_makanan`, `energi_kal`, `protein_g`, `lemak_g`, `karbohidrat_g`, `rank`, `distance`, `similarity_score`, `catatan`, `created_at`) VALUES
-(391, 45, 'Kacang negara', 'CP033', 480.00, 18.40, 19.10, 58.50, 1, 0.154394, 0.8663, NULL, '2026-06-23 09:44:58'),
-(392, 45, 'Susu bubuk', 'JP006', 513.00, 24.60, 30.00, 36.20, 2, 0.154610, 0.8661, NULL, '2026-06-23 09:44:58'),
-(393, 45, 'Ampas tahu, kering', 'CP018', 414.00, 26.60, 18.30, 41.30, 3, 0.157146, 0.8642, NULL, '2026-06-23 09:44:58'),
-(394, 45, 'Abon ikan', 'GP054', 435.00, 27.20, 20.20, 36.10, 4, 0.159075, 0.8628, NULL, '2026-06-23 09:44:58'),
-(395, 45, 'Saga merah terkupas, mentah', 'CR051', 449.00, 30.60, 25.50, 31.90, 5, 0.159600, 0.8624, NULL, '2026-06-23 09:44:58'),
-(396, 45, 'Keripik tempe abadi telur', 'CP044', 529.00, 20.80, 31.70, 40.20, 6, 0.161728, 0.8608, NULL, '2026-06-23 09:44:58'),
-(397, 45, 'Kacang belimbing (kecipir), kering', 'CR003', 400.00, 34.40, 16.90, 34.10, 7, 0.162488, 0.8602, NULL, '2026-06-23 09:44:58');
-
 -- --------------------------------------------------------
 
 --
@@ -171,7 +154,6 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`id`, `nama`, `email`, `password_hash`, `role`, `created_at`, `otp_code`, `otp_expires_at`, `is_verified`) VALUES
 (16, 'Ahli Gizi Utama', 'petugas@gmail.com', '$2b$10$1cUH4FL9VCyEZatOM.l47e6aicbUNTMOhTC1yizBjrqIRr84sUSGK', 'ahli_gizi', '2026-06-15 16:13:03', NULL, NULL, 1),
-(19, 'Alif Setyabudi', 'alifsetyabudi812004@gmail.com', '$2b$10$tUJAUEVxLcNTelc0WZAINuPUkm0ZDCK/zAzYsHwA/OfwT42xlP0g2', 'pasien', '2026-06-15 16:20:14', NULL, NULL, 1);
 
 --
 -- Indexes for dumped tables
