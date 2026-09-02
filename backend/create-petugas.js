@@ -2,8 +2,8 @@ import db from './src/config/db.js';
 import bcrypt from 'bcrypt';
 
 const createPetugas = async () => {
-    const email = 'petugas@gmail.com';
-    const password = 'petugas54321'; // Password yang Anda inginkan
+    const email = ''; // buat emailnya bebas
+    const password = ''; // Password yang Anda inginkan
 
     try {
         // 1. Hapus user lama jika ada
